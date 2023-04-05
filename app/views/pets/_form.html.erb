@@ -1,0 +1,7 @@
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: ['Dog', 'Cat', 'Bird', 'Lizard'] %>
+  <%= f.input :found_on %>
+  <%= f.submit class: "btn btn-primary mt-4" %>
+<% end %>

@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><%= @pet.name %></h1>
+
+    <%= link_to edit_pet_path do %>
+      <p class="btn btn-flat mt-3">Edit</p>
+    <% end  %>
+  </div>
+
+  <div class="card-category">
+    <p>Especie: <%= @pet.species %><br>
+      Endereço: <%= @pet.address %> <br>
+      Visto: <%= @pet.found_on %></p>
+  </div>
+
+  <%= link_to pets_path do %>
+      <p class="btn btn-flat mt-3">Back</p>
+  <% end  %>
+  <br>
+  <%= link_to "Delete", pet_path(Pet.last), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+  <%= button_to "Delete", pet_path(Pet.last), method: :delete, form: { data: { turbo_confirm: "Are your sure?" } } %>
+</div>

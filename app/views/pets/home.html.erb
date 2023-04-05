@@ -1,6 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.portercountyanimalshelter.org/ImageRepository/Document?documentID=480);">
   <div class="container">
     <h1>Lost Your Pet? Report so we can help you!!</h1>
-    <a class="btn btn-flat" href="#">Found your Pet</a>
+
+    <%= link_to pets_path do %>
+      <p class="btn btn-flat"> Find Your Pet</p>
+    <% end  %>
   </div>
 </div>

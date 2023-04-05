@@ -1,0 +1,16 @@
+<div class="container">
+
+
+<h1>new pet</h1>
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: ['Dog', 'Cat', 'Bird', 'Lizard'] %>
+  <%= f.input :found_on %>
+  <%= f.submit class: "btn btn-primary mt-4" %>
+
+<% end %>
+    <%= link_to pets_path do %>
+      <p class="btn btn-primary mt-3"> Back</p>
+    <% end  %>
+</div>

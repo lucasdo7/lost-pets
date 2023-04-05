@@ -6,6 +6,17 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all
     @pets.each do |pet|
+      if pet.species == "Cat"
+        pet.species = '🐱'
+      elsif
+        pet.species == "Dog"
+        pet.species = '🐶'
+      elsif
+        pet.species == "Lizard"
+        pet.species = '🦎'
+      else
+        pet.species = '🐥'
+      end
     end
   end
 
@@ -42,7 +53,7 @@ class PetsController < ApplicationController
   def destroy
     @pet = Pet.find(params[:id])
     @pet.destroy
-    redirect_to peths_path status: :see_other
+    redirect_to pets_path status: :see_other
   end
 
   private

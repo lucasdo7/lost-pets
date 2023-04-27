@@ -9,11 +9,9 @@ class PetsController < ApplicationController
     @pets.each do |pet|
       if pet.species == "Cat"
         pet.species = '🐱'
-      elsif
-        pet.species == "Dog"
+      elsif pet.species == "Dog"
         pet.species = '🐶'
-      elsif
-        pet.species == "Lizard"
+      elsif pet.species == "Lizard"
         pet.species = '🦎'
       else
         pet.species = '🐥'

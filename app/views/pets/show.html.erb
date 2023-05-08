@@ -16,7 +16,7 @@
   <%= link_to pets_path do %>
       <p class="btn btn-flat mt-3">Back</p>
   <% end  %>
-  <br>
-  <%= link_to "Delete", pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" }, class: 'btn btn-flat mt-3' %>
+
+  <%= link_to "Delete", pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" }, class: 'btn btn-flat mt-auto' %>
 
 </div>

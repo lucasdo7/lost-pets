@@ -48,7 +48,7 @@ class PetsController < ApplicationController
 
   def destroy
     @pet.destroy
-    redirect_to pets_path status: :see_other
+    redirect_to pets_path, status: :see_other
   end
 
   private

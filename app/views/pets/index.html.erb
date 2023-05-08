@@ -1,11 +1,25 @@
 <div class="container working">
   <h1>pets losts</h1>
 
-
-  <ul style="list-style: none;"><% @pets.each do |pet| %>
-    <li><%= pet.name %> (<strong><%= link_to pet.species, pet_path(pet), class: 'text-decoration-none' %></strong>)</li>
-      <% end %>
-  </ul>
+  <div>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Species</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pets.each do |pet| %>
+          <tr>
+            <td><%= link_to pet.name, pet_path(pet), class: 'text-decoration-none' %></td>
+            <td><%= link_to pet.species, pet_path(pet), class: 'text-decoration-none' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <hr>
 
   <%= link_to 'Find A Pet', new_pet_path, class: 'btn btn-flat' %> <br>
   <%= link_to 'Home Page', root_path, class: 'btn btn-flat mt-3' %>
